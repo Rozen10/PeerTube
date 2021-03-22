@@ -282,7 +282,16 @@ service nginx start
 1. Add the packages:
 
 ```
-brew install ffmpeg nginx postgresql openssl gcc make redis git yarn
+brew install bash ffmpeg nginx postgresql openssl gcc make redis git yarn
+Maybe, you should update your bash to fix some errors.
+Follow the steps.
+** How to change default shell **
+Step 1 - brew install bash
+Step 2 - which -a bash
+Step 3 - bash --version (You must have the latest version).
+Step 4 - sudo vim /etc/shells (You can use an other editor than vim) and add that in the file : /usr/local/bin/bash
+Step 5 - chsh -s /usr/local/bin/bash (To set the new bash as default bash).
+Step 6 - echo $BASH_VERSION (To verify your bash version).
 ```
 
 2. Run the services:
